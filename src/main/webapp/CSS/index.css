@@ -1,0 +1,190 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    background-color: #1c1c1c;
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+.container h2{
+    color: #ff5252;
+}
+.container h1{
+    width: 75%; /* Adjust percentage to control wrapping */
+    white-space: normal; /* Ensure text wraps */
+}
+
+.container p{
+    display: inline-flex;
+    align-items: center; /* Align items vertically in the center */
+    gap: 10px; /* Add space between the location icon and the input */
+}
+
+.container p i{
+    color: #ff5252;
+}
+.date-input {
+    margin-left: 20px;
+    border-radius: 3px;
+    border: 1px white solid;
+    width: 100px;
+    background-color: #1c1c1c;
+    color: #ffffff;
+}
+
+.form-container {
+    width: 45%; /* Restrict the width to align neatly */
+    margin-top: 20px; /* Add space from the reservation summary */
+}
+
+.user-details {
+    margin-bottom: 20px;
+    text-align: left; /* Align text to the left */
+}
+
+.user-details h3 {
+    color: #ff5252;
+    margin-bottom: 15px;
+}
+
+.user-details label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.user-details input[type="text"],
+.user-details input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 2px;
+    background-color: #333;
+    color: #fff;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkbox-container input {
+    margin-right: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the left */
+    gap: 10px; /* Add space between buttons */
+}
+
+.back-button,
+.continue-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.back-button {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.continue-button {
+    background-color: #ff5252;
+    color: #fff;
+}
+
+.payment-summary {
+    position: absolute; /* Use absolute positioning for precise placement */
+    right: 20px; /* 20px from the right edge of the page */
+    top: 50%; /* Place it at the middle of the page */
+    transform: translateY(-50%); /* Adjust to center vertically */
+    padding: 20px;
+    width: 300px; /* Fixed width for consistent layout */
+    margin-right: 50px;
+}
+
+.payment-summary h3 {
+    color: #ff5252;
+    margin-bottom: 15px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #555;
+}
+
+.paypal-logo {
+    margin-top: 20px;
+    max-width: 100px;
+    display: block;
+    margin-left: auto;
+
+}
+
+
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .payment-summary {
+        position: relative; /* Switch to relative positioning */
+        right: 0; /* Reset right alignment */
+        top: 0; /* Reset top alignment */
+        transform: none; /* Remove translate adjustments */
+        margin-top: 20px; /* Add spacing */
+        margin-right: 0; /* Reset margin */
+        width: 100%; /* Expand to full width */
+        max-width: none; /* Allow it to occupy more space */
+    }
+
+    .paypal-logo {
+        margin-left: 0; /* Center logo on smaller screens */
+        margin-right: auto; /* Align it properly in the new layout */
+        max-width: 80px; /* Reduce size slightly for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .payment-summary {
+        padding: 15px; /* Reduce padding for very small screens */
+    }
+
+    .summary-item,
+    .summary-total {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .summary-item span,
+    .summary-total span {
+        margin-bottom: 5px; /* Add spacing between stacked items */
+    }
+
+    .paypal-logo {
+        max-width: 60px; /* Further reduce logo size for small screens */
+    }
+}
+
